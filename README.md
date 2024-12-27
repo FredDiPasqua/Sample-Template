@@ -1,82 +1,107 @@
-# AI Content Editor with CopilotKit
+# 🚀 **AI Content Editor with CopilotKit – Daytona Submission Guide**
 
-## Overview
-This project is an AI-powered content editor built using **React**, **Next.js**, **Cohere API** for AI-powered suggestions, and **CopilotKit**. It provides users with writing assistance in various styles (e.g., formal, casual, creative, etc.). The app leverages a floating glass UI with dynamic prompts and real-time AI suggestions.
+---
 
-## Features
-- AI-powered content suggestions using Cohere API.
-- Multiple writing styles: formal, casual, creative, for kids, sci-fi, action movie.
-- Real-time feedback with debounce for efficient API calls.
-- Dynamic prompts based on user input and selected writing style.
-- A sleek, floating glass-style UI with deep space background.
+## 📚 **Overview**
+This project is an AI-powered content editor built using **React**, **Next.js**, **Cohere API** for AI-powered suggestions, and **CopilotKit**. It provides users with advanced writing assistance in multiple styles (e.g., formal, casual, creative, sci-fi, and more). The app leverages a sleek floating glass UI with dynamic prompts and real-time AI suggestions.
 
-## Project Structure
-- `src/app/`: Contains the main app layout, page structure, and API routes.
-  - `page.tsx`: The main page component.
-  - `api/`: API routes for handling requests to Cohere.
-- `src/components/`: Contains reusable components.
-  - `AIEditor.tsx`: Text editor component that sends input to the AI for suggestions.
-- `src/styles/globals.css`: Global CSS for styling, including Tailwind integration.
-- `public/`: Static assets like background images and icons.
-- `utils/`: Utility functions like the debounce logic.
+---
 
-## Setup and Installation
+## ✨ **Features**
+- **AI-Powered Content Suggestions:** Leverages the Cohere API for intelligent text completions.  
+- **Dynamic Writing Styles:** Switch between formal, casual, creative, sci-fi, action movie styles, and more.  
+- **Real-time Feedback:** Optimized with debounce logic to reduce unnecessary API calls.  
+- **Floating Glass UI:** A clean and modern interface with an interactive glass effect.  
+- **Customizable Prompts:** Users can customize prompts dynamically based on their style and input.  
 
-### Prerequisites
-- **Node.js**: Ensure that Node.js is installed on your machine.
-- **Cohere API Key**: You'll need to obtain an API key from [Cohere](https://cohere.ai/).
+---
 
-### Steps
-1. Clone the repository:
+## 📁 **Project Structure**
+- **`src/app/`:** Main app layout, page structure, and API routes.
+   - `page.tsx`: Main page component.
+   - `api/`: API routes to handle Cohere interactions.
+- **`src/components/`:** Reusable components.
+   - `AIEditor.tsx`: Core text editor component.
+- **`src/styles/globals.css`:** Global CSS for styling with TailwindCSS.
+- **`public/`:** Static assets (e.g., images, icons).
+- **`utils/`:** Utility functions such as debounce logic.
+
+---
+
+## 🛠️ **Setup and Installation**
+
+### **Prerequisites**
+- **Node.js:** Ensure Node.js is installed.  
+- **Cohere API Key:** Obtain from [Cohere](https://cohere.ai/).  
+
+### **Steps**
+
+1. **Clone the Repository:**  
    ```bash
    git clone https://github.com/your-username/ai-content-editor.git
    cd ai-content-editor
-   ```
 
-2. Install dependencies:
-
-    ```npm install```
-
-3. Set up environment variables: Create a .env.local file in the root directory and add your API key:
-
+2. **Install Dependencies:**
     ```bash
-    NEXT_PUBLIC_COHERE_API_KEY=<your-cohere-api-key>
-    ```
+    npm install
 
-4. Run the development server:
+3. **Set Environment Variables:**
 
+    Create a .env.local file in the root:
+    ```bash
+   NEXT_PUBLIC_COHERE_API_KEY=<your-cohere-api-key>
+
+4. **Run the Development Server:**
     ```bash
     npm run dev
-    ```
+  Open http://localhost:3000 in your browser.
 
-    Open http://localhost:3000 to view the app in the browser.
-    
-### Building for Production
-To build the application for production:
+5. 🏗️ Build for Production.
 
+    To build the production version:
+    ```bash
     npm run build
 
-This will generate the production-ready version of your app inside the .next directory.
+    
+## 🐳 **Docker Setup**
 
-### Technologies Used
+### 🛠️ Build and Run with Docker Compose
+1.	Ensure Docker and Docker Compose are installed.
+2.	Navigate to the project root directory.
+3.	Run:
+    ```bash
+      docker-compose up --build
 
-- **React & Next.js**: For building the frontend and server-side rendered React app.
-- **Cohere API**: For AI-powered suggestions based on user input.
-- **CopilotKit**: For integrating AI copilots into the application.
-- **Custom CSS**: For styling the application, including animations and glassmorphism effects.
-- **Debounce**: To optimize the frequency of API calls.
-
-
-### New Features
-
-- **Improved AI Suggestions**: Enhanced the AI suggestion generation by adding contextual instructions to the prompt, resulting in more relevant and creative outputs.
-- **Responsive UI**: Added animations and a more balanced color palette to improve user experience and visual feedback.
-- **Character-Length Matching**: Ensured that the AI-generated text stays within a range of 15 characters more or less than the user-inputted text for more consistent output length.
+4.	Access the app at http://localhost:3000
 
 
-## 🚀 Live Demo
+## 🌐 **Open Using Daytona**
 
-Check out the live version of the AI Storyteller App:
+### 🛠️ Steps with Daytona CLI
+1.	Install Daytona
 
-👉 [Click here to visit](https://ai-content-editor.vercel.app/)
+    Follow the installation guide at [Daytona Docs](https://daytona.io/docs).
 
+2.	Create a Daytona Workspace
+    ```bash
+        daytona create <REPO_URL>
+3.	Start the Application
+    ```bash
+        npm run dev 
+
+## 📚 **Technologies Used**
+-	React & Next.js: Frontend development and server-side rendering.
+-	Cohere API: AI-powered content generation.
+-	CopilotKit: AI copilots for enhanced user experience.
+-	Docker: Containerized deployment.
+-	DevContainer: Environment setup for Daytona compatibility.
+
+## 🛠️ **Troubleshooting**
+
+### 🚨 Common Issues
+1.	API Key Misconfiguration:
+-	Ensure NEXT_PUBLIC_COHERE_API_KEY is set in .env.local.
+2.	Docker Build Issues:
+-	Verify Dockerfile exists in the root directory.
+3.	Environment Variables Not Loaded:
+-	Restart your development server after modifying .env.local.
