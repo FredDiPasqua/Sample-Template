@@ -1,0 +1,44 @@
+# dependencies
+/node_modules
+/.pnp
+.pnp.js
+.yarn/install-state.gz
+
+# testing
+/coverage
+
+# next.js
+/.next/
+/out/
+
+# production
+/build
+
+# docker
+.docker/*
+docker-volume/
+
+# editor
+.vscode/
+
+# log files
+*.log
+
+# misc
+.DS_Store
+*.pem
+.history/
+.eslintcache
+
+# local env files
+.env*.local
+
+# vercel
+.vercel
+
+# typescript
+*.tsbuildinfo
+next-env.d.ts
+
+# static
+/public/
